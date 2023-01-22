@@ -1,0 +1,27 @@
+
+Data Preprocessing
+
+What variable(s) are the target(s) for your model?
+
+"y" = "IS_SUCCESSFUL"
+
+What variable(s) are the features for your model?
+X  = df_dummies.drop(columns='IS_SUCCESSFUL', axis=1) basically everything other than "IS_SUCCESSFUL"
+What variable(s) should be removed from the input data because they are neither targets nor features?
+  probably "EIN" or	"NAME"
+Compiling, Training, and Evaluating the Model
+
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+The model has 8 neurons in the first layer, 3 neurons in the second layer and 3 layers in total, including the output layer. The activation functions used are 'relu' and 'sigmoid'.
+Were you able to achieve the target model performance?
+The model performance accuracy, after training and evaluating over 100 epochs, reached a maximum of approximately 74%.
+What steps did you take in your attempts to increase model performance?
+i adjusted the input data to  make it so that no variables or outliers are causing confusion in the model. to do this i dropped more columns at random and looked at the accuracy after dropping each discrete column, a process of elimination could result in a bettere accuracy.
+Or adding additional hidden layers and/or neurons to see what comes of thosechangess.
+adjusting the amount of epochs also has an effect on the accuracy but not much was different after increasing the epochs to 150 from 100
+Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+i'd say this model would need some time tweaking the settings and dialing in the perfect amount of layers and nuerons to perform better,
+i also think that several other models could be utilized for classification including but not limited to "Support Vector Machines" and"k-Nearest Neighbors"
+. i think that the best recipe for success would be to try as many models as resources will allow and to choose the best performance from the options.
+one cannot truely know until you discover through testing so the budget and time constraints should guide the model choice. if I worked at a compnay with a large budget i'd say more is better.
+however if i worked at a small company with a fixed budget for these tasks i'd probably try the less resource intense models first in case one of those can offer similar accuracy without breaking the bank!
